@@ -36,7 +36,7 @@ app.use((req,res,next)=>{
 //routes
 app.use('/api',postsRoute);
 //starting server
-app.listen(3001,()=>
+app.listen(process.env.PORT,()=>
 console.log("server is starting"));
     }
     catch(err) {
