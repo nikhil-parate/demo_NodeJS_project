@@ -5,7 +5,7 @@ const service = {
      return mongo.db.collection('testMe').find().toArray();
     },
     createposts(data) {
-     return mongo.db.collection('testMe').insert(data);
+     return mongo.db.collection('testMe').insertOne(data);
     },
     update(nameid,data){
      return mongo.db.collection('testMe').findOneAndUpdate({name:nameid},{$set:data},{returnDocument: "after"});
